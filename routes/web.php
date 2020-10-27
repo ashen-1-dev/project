@@ -15,9 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-})->name('main');
+//Route::get('/', function () {
+//    return view('main');
+//})->name('main');
 
+Route::get('/', 'ListController@allData')->name('list_data');
 
-Route::post('/submit', 'mainController@submit')->name('list_form');
+Route::get('/{id}', 'ListController@showOneList')->name('list_one_form');
+
+Route::post('/submit', 'ListController@submit')->name('list_form');
+
+Route::get('/{id}/editlist', 'ListController@listUpdate')->name('list_one_edit');
+
+Route::post('/{id}/editlist', 'ListController@listUpdateSubmit')->name('list_one_edit_submit');
+Route::get('/{id}/delete', 'ListController@listDelete')->name('list_one_delete');
