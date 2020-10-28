@@ -2,15 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb691453-8022-4155-8d45-e1f5f60161b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/editlist.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/layouts/errors.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/list_one.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/edit_todo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/mainController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/todo_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/todo_lists.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/www.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/www.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ListRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ListRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/todo.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_23_162455_create_todo_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_162455_create_todo_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/list_one.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list_one.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +139,9 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
     </include_path>
   </component>
   <component name="ProjectId" id="1j0R7gt2pXgElzhE95uBdcVFRz6" />
@@ -145,19 +152,20 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/database/migrations" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/database/migrations" />
+      <recent name="$PROJECT_DIR$/resources/views" />
+      <recent name="$USER_HOME$/Рабочий стол" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/resources/views/layouts" />
       <recent name="$PROJECT_DIR$/resources/views" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/resources/views" />
-      <recent name="$USER_HOME$/Рабочий стол" />
     </key>
   </component>
   <component name="RunManager">
@@ -182,7 +190,8 @@
       <workItem from="1603466588016" duration="10721000" />
       <workItem from="1603564342820" duration="5851000" />
       <workItem from="1603628221343" duration="6218000" />
-      <workItem from="1603791501199" duration="16976000" />
+      <workItem from="1603791501199" duration="18462000" />
+      <workItem from="1603878193734" duration="22790000" />
     </task>
     <servers />
   </component>
@@ -190,10 +199,18 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="638" y="323" width="706" height="467" key="#Log_Highlighting_(ideolog)" timestamp="1603890197305">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="638" y="323" width="706" height="467" key="#Log_Highlighting_(ideolog)/72.27.1848.1053@72.27.1848.1053" timestamp="1603890197305" />
     <state x="454" y="211" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603467023896">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="454" y="211" width="1084" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603467023896" />
+    <state x="739" y="322" width="494" height="478" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603878994228">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="739" y="322" width="494" height="478" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1603878994228" />
     <state x="535" y="101" width="912" height="911" key="CommitChangelistDialog2" timestamp="1603570006268">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -202,14 +219,14 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="769" y="256" width="424" height="520" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1603466691405" />
-    <state x="485" y="188" width="1231" height="737" key="SettingsEditor" timestamp="1603629212766">
+    <state x="485" y="188" width="1231" height="737" key="SettingsEditor" timestamp="1603814337621">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="485" y="188" width="1231" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1603629212766" />
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1603799792200">
+    <state x="485" y="188" width="1231" height="737" key="SettingsEditor/72.27.1848.1053@72.27.1848.1053" timestamp="1603814337621" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1603880645151">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603799792200" />
+    <state x="659" y="259" width="672" height="678" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1603880645151" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -217,11 +234,6 @@
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/config/mail.php</url>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/resources/views/layouts/app.blade.php</url>
-          <line>8</line>
-          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

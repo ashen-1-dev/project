@@ -28,4 +28,12 @@ Route::post('/submit', 'ListController@submit')->name('list_form');
 Route::get('/{id}/editlist', 'ListController@listUpdate')->name('list_one_edit');
 
 Route::post('/{id}/editlist', 'ListController@listUpdateSubmit')->name('list_one_edit_submit');
+
 Route::get('/{id}/delete', 'ListController@listDelete')->name('list_one_delete');
+
+Route::post('/{id}/addtodo','ListController@addTodo')->name('add_todo');
+
+Route::get('/{id}/edittodo','ListController@updateTodo')->name('edit_todo');
+
+Route::post('/{id}/edittodo','ListController@updateTodoSubmit')->name('edit_todo_submit');
+

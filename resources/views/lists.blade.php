@@ -21,7 +21,7 @@
 
     <br>
 
-    <h4>Ваш список</h4>
+    <h4>Ваши списки</h4>
     @foreach($data as $el)
     <div class='alert alert-info'>
         <h6>{{$el->name}}</h6>

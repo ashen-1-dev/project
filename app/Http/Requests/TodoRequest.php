@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ListRequest extends FormRequest
+class TodoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,18 +25,13 @@ class ListRequest extends FormRequest
     {
         return [
             'name'=>'required|min:5'
-
         ];
     }
-
-    public function messages()
-    {
-        return[
-            'name.required' => 'Имя списка является обязательным!',
-            'name.min'=>'Имя должно иметь минимум 5 символов'
-
-        ];
+    public function messages() {
+    return[
+      'name.required'=>'Имя является обязательным',
+       'name.min'=>'Имя должно иметь минимум 5 символов'
+    ];
     }
-
-
 }
+
