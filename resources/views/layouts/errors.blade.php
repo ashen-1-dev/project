@@ -1,3 +1,6 @@
+{{-- Шаблон вывода ошибок при некорректной отправки формы.--}}
+
+
 @if($errors->any())
     <div class="alert alert-danger">
         <ul>
@@ -8,6 +11,8 @@
     </div>
 
 @endif
+
+{{--Шаблон сообщения об успешной отправке формы--}}
 
 @if(session('success'))
     <div class="aler alert-success">

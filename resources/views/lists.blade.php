@@ -1,3 +1,6 @@
+{{--Главная страница. Здесь отображаются все существующие списки дел--}}
+
+
 @extends('layouts.app')
 
 @section('title-block')To-do list

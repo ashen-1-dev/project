@@ -1,3 +1,4 @@
+{{-- Здесь отображается выбранный список дел--}}
 @extends('layouts.app')
 
 @section('title-block'){{$data->name}}@endsection

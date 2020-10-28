@@ -2,19 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb691453-8022-4155-8d45-e1f5f60161b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/edit_todo.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/www.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/www.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ListController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/ListRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/ListRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/todo.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_23_162455_create_todo_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_23_162455_create_todo_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/errors.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/errors.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/list_one.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/list_one.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/lists.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/lists.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +182,7 @@
       <workItem from="1603564342820" duration="5851000" />
       <workItem from="1603628221343" duration="6218000" />
       <workItem from="1603791501199" duration="18462000" />
-      <workItem from="1603878193734" duration="22790000" />
+      <workItem from="1603878193734" duration="23345000" />
     </task>
     <servers />
   </component>
