@@ -5,7 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class todo_lists extends Model
+class TodoList extends Model
 {
     use HasFactory;
+    protected $table = 'todo_lists';
 }

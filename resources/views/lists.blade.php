@@ -8,7 +8,7 @@
 
 @section('content')
 
-    @include('layouts.errors')
+{{--    @include('layouts.errors')--}}
 
     <h1 xmlns="http://www.w3.org/1999/html">My to-do list!</h1>
     <h4>Добавить список!</h4>
