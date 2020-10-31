@@ -32,6 +32,8 @@ Route::get('/{id}/delete', 'ListController@listDelete')->name('list_one_delete')
 
 Route::post('/{id}/addtodo','ListController@addTodo')->name('add_todo'); // Добавить дело
 
+Route::get('/{id}/deleteTodo/{todoId}','ListController@deleteTodo')->name('delete_todo'); // Удалить дело
+
 Route::get('/{id}/edittodo','ListController@updateTodo')->name('edit_todo'); // Изменить дело(Не работает)
 
-Route::post('/{id}/edittodo','ListController@updateTodoSubmit')->name('edit_todo_submit'); // Удалить дело(не работает)
+Route::post('/{id}/edittodo','ListController@updateTodoSubmit')->name('edit_todo_submit');

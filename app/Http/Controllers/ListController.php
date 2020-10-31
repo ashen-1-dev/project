@@ -83,4 +83,10 @@ class   ListController extends Controller
     public function editTodoSubmit($id) {
     //
     }
+
+    public function deleteTodo($todoId, $id)
+    {
+        Todo::find($todoId)->delete();
+        return redirect()->route('list_one_form',$id)->with('success', 'Список был удалён');
+    }
 }

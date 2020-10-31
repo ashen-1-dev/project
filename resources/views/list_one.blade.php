@@ -4,7 +4,7 @@
 @section('title-block'){{$data->name}}@endsection
 
 @section('content')
-    @include('layouts.errors')
+{{--    @include('layouts.errors')--}}
     <div class='alert alert-info'>
         <h6>{{$data->name}}</h6>
         <p><small>Дата создания: {{$data->created_at}}</small></p>
@@ -89,8 +89,8 @@
                     <label><input type="checkbox" name="check" value="false" disabled > Сделано</label>
             @endif
 
-            <a href="{{route('edit_todo',$el->id)}}"><button class="btn btn-primary">Изменить</button></a>
-            <a href="#"><button class="btn btn-danger">Удалить</button></a>
+{{--            <a href="{{route('edit_todo', $el->id)}}"><button type="submit" class="btn btn-primary">Изменить</button></a>--}}
+           <a href="{{route('delete_todo',[$el->id, $el->list_id])}}"><button type="submit" class="btn btn-danger">Удалить</button></a>
         </div>
     @endforeach
 
