@@ -4,7 +4,7 @@
 @section('title-block'){{$data->name}}@endsection
 
 @section('content')
-{{--    @include('layouts.errors')--}}
+    @include('layouts.errors')
     <div class='alert alert-info'>
         <h6>{{$data->name}}</h6>
         <p><small>Дата создания: {{$data->created_at}}</small></p>
