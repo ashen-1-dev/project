@@ -11,7 +11,7 @@ use App\Models\Todo;
 
 class ListController extends Controller
 {
-    public function submit(ListRequest $request)
+    public function submit(Request $request)
     {
         $add_new = new TodoList();
         $add_new->name = $request->input('name');
@@ -37,23 +37,23 @@ class ListController extends Controller
 //        return view('editlist', ['data'=>$list->find($id)]);
 //    }
 
-    public function listUpdateSubmit($id, ListRequest $request)
+    public function listUpdateSubmit(TodoList $listId, Request $request)
     {
-        $add_new = TodoList::find($id);
+        $add_new = $listId;
         $add_new->name = $request->input('name');
 
         $add_new->save();
 
-        return redirect()->route('list_data', $id);
+        return redirect()->route('list_data', $listId);
     }
 
-    public function listDelete($id)
+    public function listDelete(TodoList $listId)
     {
-        TodoList::find($id)->delete();
+        $listId->delete();
         return redirect()->route('list_data');
     }
 
-    public function addTodo($listId, TodoRequest $request)
+    public function addTodo($listId, Request $request)
     {
         $add_new = new Todo();
         $add_new->name = $request->input('name');
@@ -77,9 +77,9 @@ class ListController extends Controller
 //        return redirect()->route('list_one_form', $todoId);
 //    }
 
-    public function updateTodo($listId, $todoId, TodoRequest $request ) {
+    public function updateTodo(TodoList $listId, Todo $todoId, Request $request ) {
 
-        $add_new = Todo::find($todoId);
+        $add_new = $todoId;
         $add_new->check = $request->input('check');
 
         $add_new->save();

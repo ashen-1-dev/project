@@ -22,7 +22,7 @@ class CreateTodoTable extends Migration
             $table->integer('urgent');
             $table->boolean('check')->default(false);
             $table->unsignedBigInteger('list_id');
-            $table->foreign('list_id')->references('id' )->on('todo_lists')->onDelete('cascade');
+            $table->foreign('list_id')->references('id' )->on('todo_lists')->onDelete('cascade')->onUpdate('no action');
             $table->timestamps();
         });
     }
