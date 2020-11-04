@@ -24,17 +24,7 @@ class ListRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|min:5'
-
-        ];
-    }
-
-    public function messages()
-    {
-        return[
-            'name.required' => 'Имя списка является обязательным!',
-            'name.min'=>'Имя должно иметь минимум 5 символов'
-
+            'name'=>'required'
         ];
     }
 

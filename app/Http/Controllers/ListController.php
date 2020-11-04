@@ -11,7 +11,7 @@ use App\Models\Todo;
 
 class ListController extends Controller
 {
-    public function submit(Request $request)
+    public function submit(ListRequest $request)
     {
         $add_new = new TodoList();
         $add_new->name = $request->input('name');
@@ -31,13 +31,7 @@ class ListController extends Controller
         return Todo::all()->where('list_id','=', $listId);
     }
 
-//    public function listUpdate($id)
-//    {
-//        $list = new TodoList();
-//        return view('editlist', ['data'=>$list->find($id)]);
-//    }
-
-    public function listUpdateSubmit(TodoList $listId, Request $request)
+    public function listUpdateSubmit(TodoList $listId, ListRequest $request)
     {
         $add_new = $listId;
         $add_new->name = $request->input('name');
@@ -53,7 +47,7 @@ class ListController extends Controller
         return redirect()->route('list_data');
     }
 
-    public function addTodo($listId, Request $request)
+    public function addTodo($listId, TodoRequest $request)
     {
         $add_new = new Todo();
         $add_new->name = $request->input('name');
@@ -67,16 +61,6 @@ class ListController extends Controller
         return redirect()->route('list_one_form', $listId);
     }
 
-//    public function updateTodo($todoId, TodoRequest $request)
-//    {
-//        $add_new = Todo::find($todoId);
-//        $add_new->check = $request->input('check');
-//
-//        $add_new->save();
-//
-//        return redirect()->route('list_one_form', $todoId);
-//    }
-
     public function updateTodo(TodoList $listId, Todo $todoId, Request $request ) {
 
         $add_new = $todoId;
@@ -87,9 +71,9 @@ class ListController extends Controller
         return redirect()->route('list_one_form', $listId);
     }
 
-    public function deleteTodo($listId, $todoId)
+    public function deleteTodo($listId, Todo $todoId)
     {
-        Todo::find($todoId)->delete();
+        $todoId->delete();
         return redirect()->route('list_one_form', $listId);
     }
 }

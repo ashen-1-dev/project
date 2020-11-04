@@ -24,14 +24,9 @@ class TodoRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required|min:5'
+            'name'=>'required',
+            'urgent'=>'required',
         ];
     }
-    public function messages() {
-    return[
-      'name.required'=>'Имя является обязательным',
-       'name.min'=>'Имя должно иметь минимум 5 символов'
-    ];
-    }
-}
+ }
 

@@ -19,8 +19,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/', 'ListController@allData')->name('list_data'); // Вывод всех списков с БД
+Route::post('/', 'ListController@submit')->name('list_form'); // POST-запрос на создание нового списка
 Route::get('/{listId}', 'ListController@showOneList')->name('list_one_form'); // Показать  список
-Route::post('/submit', 'ListController@submit')->name('list_form'); // POST-запрос на создание нового списка
 Route::patch('/{listId}/', 'ListController@listUpdateSubmit')->name('list_one_edit_submit'); // POST-запрос на изменение имени
 Route::delete('/{listId}', 'ListController@listDelete')->name('list_one_delete'); // Удалить список
 Route::post('/{listId}/','ListController@addTodo')->name('add_todo'); // Добавить дело
