@@ -18,12 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/', 'ListController@allData')->name('list_data'); // Вывод всех списков с БД
-Route::post('/', 'ListController@submit')->name('list_form'); // POST-запрос на создание нового списка
-Route::get('/{listId}', 'ListController@showOneList')->name('list_one_form'); // Показать  список
-Route::patch('/{listId}/', 'ListController@listUpdateSubmit')->name('list_one_edit_submit'); // POST-запрос на изменение имени
-Route::delete('/{listId}', 'ListController@listDelete')->name('list_one_delete'); // Удалить список
-Route::post('/{listId}/','ListController@addTodo')->name('add_todo'); // Добавить дело
-Route::delete('/{listId}/{todoId}','ListController@deleteTodo')->name('delete_todo'); // Удалить дело
-Route::patch('/{listId}/{todoId}/','ListController@updateTodo')->name('edit_todo'); // Изменить дело
-//Route::post('/{id}/edittodo','ListController@updateTodoSubmit')->name('edit_todo_submit');
+Route::get('/', 'ListController@allData')->name('list_data'); // Вывод всех списков GET
+Route::post('/', 'ListController@createList')->name('list_form'); //  Cоздание нового списка POST
+Route::get('/{list}', 'ListController@showOneList')->name('list_one_form'); // Показать  список GET
+Route::patch('/{list}/', 'ListController@listUpdate')->name('list_one_edit_submit'); // Изменить имя PATCH
+Route::delete('/{list}', 'ListController@listDelete')->name('list_one_delete'); // Удалить список DELETE
+
+Route::post('/{list}/','TodoController@todoAdd')->name('add_todo'); // Добавить дело POST
+Route::delete('/{list}/{todo}','TodoController@todoDelete')->name('delete_todo'); // Удалить дело DELETE
+Route::patch('/{list}/{todo}/','TodoController@todoUpdate')->name('edit_todo'); // Изменить дело PATCh

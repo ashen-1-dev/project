@@ -25,7 +25,7 @@ class TodoRequest extends FormRequest
     {
         return [
             'name'=>'required',
-            'urgent'=>'required',
+            'urgent'=>'required|min:1|max:5',
         ];
     }
  }
