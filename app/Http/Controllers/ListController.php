@@ -23,7 +23,7 @@ class ListController extends Controller
         return TodoList::all();
     }
 
-    public function showOneList($list)
+    public function showList($list)
     {
         return Todo::all()->where('list_id', '=', $list);
     }

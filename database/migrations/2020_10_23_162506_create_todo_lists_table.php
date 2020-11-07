@@ -13,7 +13,8 @@ class CreateTodoListsTable extends Migration
      */
     public function up()
     {
-        Schema::create('todo_lists', function (Blueprint $table) {
+        Schema::create('todo_lists', function (Blueprint $table)
+        {
             $table->charset = 'UTF8';
             $table->bigIncrements('id');
             $table->string('name',100);

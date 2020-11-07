@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/lists', 'ListController@allData')->name('list_data'); // Вывод всех списков GET
 Route::post('/lists', 'ListController@createList')->name('list_form'); //  Cоздание нового списка POST
-Route::get('/lists/{list}', 'ListController@showOneList')->name('list_one_form'); // Показать  список GET
+Route::get('/lists/{list}', 'ListController@showList')->name('list_one_form'); // Показать  список GET
 Route::patch('/lists/{list}/', 'ListController@listUpdate')->name('list_one_edit_submit'); // Изменить имя PATCH
 Route::delete('/lists/{list}', 'ListController@listDelete')->name('list_one_delete'); // Удалить список DELETE
 

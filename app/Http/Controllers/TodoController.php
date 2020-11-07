@@ -24,7 +24,8 @@ class TodoController extends Controller
         return Todo::all()->where('list_id', '=', $list);
     }
 
-    public function todoUpdate(TodoList $list, Todo $todo, Request $request ) {
+    public function todoUpdate(TodoList $list, Todo $todo, Request $request )
+    {
 
         $todo->check = $request->input('check');
 

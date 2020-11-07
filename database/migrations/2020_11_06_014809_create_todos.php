@@ -13,7 +13,8 @@ class CreateTodos extends Migration
      */
     public function up()
     {
-        Schema::create('todos', function (Blueprint $table) {
+        Schema::create('todos', function (Blueprint $table)
+        {
             $table->charset = 'UTF8';
             $table->bigIncrements('id');
             $table->string('name',100);
