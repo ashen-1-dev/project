@@ -18,10 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/', function (){
-    return 'Success!';
-});
-
+//Route::get('/', function (){
+//    return 'Success!';
+//});
+//
 //Route::post('/login', 'LoginController')->name('login_route');
 //Route::post('/register', 'RegisterController')->name('register_route');
 

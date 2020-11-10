@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\TodoRequest;
-use Illuminate\Http\Request;
 use App\Models\TodoList;
 use App\Models\Todo;
+use App\Http\Requests\CheckRequest;
 
 class TodoController extends Controller
 {
@@ -24,7 +24,7 @@ class TodoController extends Controller
         return 'New task №' . $add_new->id . ' has been created';
     }
 
-    public function todoUpdate(TodoList $list, Todo $todo, Request $request )
+    public function todoUpdate(TodoList $list, Todo $todo, CheckRequest $request )
     {
 
         $todo->check = $request->input('check');
@@ -34,7 +34,7 @@ class TodoController extends Controller
         return 'Task №' . $list->id . ' has been updated';
     }
 
-    public function todoDelete($list, Todo $todo)
+    public function todoDelete(Todo $todo)
     {
         $todo->delete();
 
