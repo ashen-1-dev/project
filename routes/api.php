@@ -18,12 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-//Route::get('/', function (){
-//    return 'Success!';
-//});
-//
-//Route::post('/login', 'LoginController')->name('login_route');
-//Route::post('/register', 'RegisterController')->name('register_route');
+Route::get('/', function (){
+    return 'Success!';
+});
+
+Route::post('/register', 'RegisterController@registerUser')->name('register_route');
+Route::post('/login', 'LoginController@loginUser')->name('login_route');
+
 
 Route::get('/lists', 'ListController@allData')->name('list_data'); // Вывод всех списков GET
 Route::post('/lists', 'ListController@createList')->name('list_form'); //  Cоздание нового списка POST
@@ -34,3 +35,4 @@ Route::delete('/lists/{list}', 'ListController@listDelete')->name('list_one_dele
 Route::post('/lists/{list}/todo/','TodoController@todoAdd')->name('add_todo'); // Добавить дело POST
 Route::delete('/lists/{list}/todo/{todo}','TodoController@todoDelete')->name('delete_todo'); // Удалить дело DELETE
 Route::patch('/lists/{list}/todo/{todo}/','TodoController@todoUpdate')->name('edit_todo'); // Изменить дело PATCH
+
