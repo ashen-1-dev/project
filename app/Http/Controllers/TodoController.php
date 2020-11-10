@@ -21,7 +21,7 @@ class TodoController extends Controller
 
         $add_new->save();
 
-        return Todo::where('list_id', '=', $list)->get();
+        return 'New task №' . $add_new->id . ' has been created';
     }
 
     public function todoUpdate(TodoList $list, Todo $todo, Request $request )
@@ -31,13 +31,13 @@ class TodoController extends Controller
 
         $todo->save();
 
-        return Todo::where('list_id', '=', $list->id)->get();
+        return 'Task №' . $list->id . ' has been updated';
     }
 
     public function todoDelete($list, Todo $todo)
     {
         $todo->delete();
 
-        return Todo::where('list_id', '=', $list)->get();
+        return 'Task №' . $todo->id . ' has been deleted';
     }
 }

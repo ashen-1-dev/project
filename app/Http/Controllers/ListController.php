@@ -23,9 +23,9 @@ class ListController extends Controller
         return TodoList::all();
     }
 
-    public function showList($list)
+    public function showList(TodoList $list)
     {
-        return Todo::where('list_id', '=', $list)->get();
+        return Todo::where('list_id', '=', $list->id)->get();
     }
 
     public function listUpdate(TodoList $list, ListRequest $request)
