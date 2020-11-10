@@ -9,7 +9,7 @@ use App\Http\Requests\CheckRequest;
 
 class TodoController extends Controller
 {
-    public function todoAdd($list, TodoRequest $request)
+    public function todoAdd(TodoList $list, TodoRequest $request)
     {
         $add_new = new Todo();
 
@@ -17,7 +17,7 @@ class TodoController extends Controller
         $add_new->description_short = $request->input('description_short');
         $add_new->description = $request->input('description');
         $add_new->urgent = $request->input('urgent');
-        $add_new->list_id = $list;
+        $add_new->list_id = $list->id;
 
         $add_new->save();
 
