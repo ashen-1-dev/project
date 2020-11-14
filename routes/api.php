@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function (){
+
+    Route::post('/user/{userId}/logout', 'UserController@logout');
 });
 
 Route::get('/', function (){
@@ -24,7 +24,7 @@ Route::get('/', function (){
 
 Route::post('/register', 'RegisterController@registerUser')->name('register_route');
 Route::post('/login', 'LoginController@loginUser')->name('login_route');
-
+Route::post('/logout', 'LogoutController@logoutUser')->name('logout_route');
 
 Route::get('/lists', 'ListController@allData')->name('list_data'); // Вывод всех списков GET
 Route::post('/lists', 'ListController@createList')->name('list_form'); //  Cоздание нового списка POST

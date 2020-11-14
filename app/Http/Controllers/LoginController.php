@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    public function loginUser(LoginRequest $request)
+    protected function loginUser(LoginRequest $request)
     {
 
         $credentials = $request->only('email', 'password');
@@ -21,6 +21,8 @@ class LoginController extends Controller
                 'token' => $token->accessToken
             ];
         }
-        return 'Incorrect login or password';
+        return response()->json(["success" => "false",
+                                 "code"    => "422",
+                                 "message" => "HTTP_UNPROCESSABLE_ENTITY"]);
     }
 }

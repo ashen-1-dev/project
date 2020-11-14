@@ -46,7 +46,6 @@ class Handler extends ExceptionHandler
     {
         $status = Response::HTTP_INTERNAL_SERVER_ERROR;
         $errors = null;
-
         if($e instanceof HttpResponseException) {
             $status = Response::HTTP_INTERNAL_SERVER_ERROR;
         } elseif ($e instanceof MethodNotAllowedHttpException) {
